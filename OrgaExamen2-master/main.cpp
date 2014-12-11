@@ -32,25 +32,15 @@ int contarMayoresDeEdadXML(string nombre_archivo)
 //Devuelve el numero anterior del nodo raiz de un Arbol dado
 int obtenerNumeroAnterior(NodoAVL* raiz)
 {
-    int temp = 0;
-    if(raiz!=NULL)
-    {
-        temp = raiz->num;
-        if(raiz->num < temp)
-            cout<<raiz->num<<endl;
-    }
-    else
-        return NULL;
 
-
-    int menor_izq = obtenerNumeroAnterior(raiz->izq);
-    return menor_izq;
+    return -1;
 }
 
 //Devuelve el numero siguiente del nodo raiz de un Arbol dado
 int obtenerNumeroSiguiente(NodoAVL* raiz)
 {
-    return -1;
+    if(raiz->num != NULL)
+        return raiz->der->num;
 }
 
 int main ()
